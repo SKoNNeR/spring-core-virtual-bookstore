@@ -1,5 +1,6 @@
 package dev.fjlamela.springcore.repository.inmemory;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,14 +27,16 @@ public class InMemoryBookRepository implements BookRepository {
 
 	@Override
 	public void deleteByIsbn(String isbn) {
-		// TODO Auto-generated method stub
-		
+		if (books.containsKey(isbn)) books.remove(isbn);
 	}
 
 	@Override
 	public List<Book> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Book> bookList= new ArrayList<>();
+		for (Book book: books.values()) {
+			bookList.add(book);
+		}
+		return bookList;
 	}
 
 }
