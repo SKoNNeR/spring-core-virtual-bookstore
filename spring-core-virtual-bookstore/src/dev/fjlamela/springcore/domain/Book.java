@@ -20,4 +20,9 @@ public class Book {
 		this.isbn= isbn;
 		this.publicationYear= publicationYear;
 	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+	
 }
