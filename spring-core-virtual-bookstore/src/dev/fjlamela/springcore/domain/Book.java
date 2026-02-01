@@ -25,4 +25,8 @@ public class Book {
 		return isbn;
 	}
 	
+	@Override
+	public String toString() {
+		return "Title: " + title + " | Author: " + author + " | Publication Year: " + publicationYear + " | ISBN: " + isbn; 
+	}
 }
