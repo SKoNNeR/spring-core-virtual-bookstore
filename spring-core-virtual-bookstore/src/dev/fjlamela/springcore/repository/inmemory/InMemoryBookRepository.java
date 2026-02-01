@@ -6,9 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Repository;
+
 import dev.fjlamela.springcore.domain.Book;
 import dev.fjlamela.springcore.repository.BookRepository;
 
+@Repository
 public class InMemoryBookRepository implements BookRepository {
 	
 	private Map<String, Book> books= new HashMap<>();

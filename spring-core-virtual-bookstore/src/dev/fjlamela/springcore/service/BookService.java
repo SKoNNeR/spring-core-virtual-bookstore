@@ -3,10 +3,13 @@ package dev.fjlamela.springcore.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import dev.fjlamela.springcore.domain.Book;
 import dev.fjlamela.springcore.repository.BookRepository;
 import dev.fjlamela.springcore.service.exception.DuplicateBookException;
 
+@Service
 public class BookService {
 
 	private final BookRepository bookRepository;
