@@ -3,6 +3,7 @@ package dev.fjlamela.springcore.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import dev.fjlamela.springcore.domain.Book;
@@ -14,7 +15,7 @@ public class BookService {
 
 	private final BookRepository bookRepository;
 	
-	public BookService(BookRepository bookRepository) {
+	public BookService(@Qualifier("inMemoryBookRepository") BookRepository bookRepository) {
 		this.bookRepository= bookRepository;
 	}
 	
